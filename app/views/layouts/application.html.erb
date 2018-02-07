@@ -3,28 +3,24 @@
   <head>
     <title>Shop</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav class="blue">
-      <div class="nav-wrapper">
-        <ul class="nav">
-          <li class="li">
-            <a class="active" href="/"><%= image_tag "https://cdn3.iconfinder.com/data/icons/family-outline/61/25_-Family-_family_home_people-32.png" %></a>
-          </li>
-          <li class="li">
-            <a href="/about">ABOUT</a>
-          </li>
-          <a href="/contact">CONTACT US</a>
-        </ul>
-      </div>
-    </nav>
-    <%= yield %>
+    <div class="w3-bar w3-green ">
+      <a href="/" class="w3-bar-item w3-button w3-mobile">Home</a>
+      <a href="/about" class="w3-bar-item w3-button w3-mobile">ABOUT</a>
+      <a href="/contact" class="w3-bar-item w3-button w3-mobile">CONTACT US</a>
+    </div>
+    <div class="w3-container">
+      <%= yield %>
+    </div>
   </body>
 </html>
