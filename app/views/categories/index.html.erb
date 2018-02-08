@@ -1,0 +1,21 @@
+<h1>MATATU.</h1>
+
+<ul>
+  <% @categories.each do |category| %>
+    <div class="col-md-4 portfolio-item">
+      <p>
+        <img src="<%= category.logo %>" alt="<%= category.name %>" width="20%" height="30%">
+      </p>
+      <h3>
+        <li style="font-size: 20px">
+          <strong><%= link_to category.name, category_path(category) %></strong>
+        </li>
+      </h3>
+    </div>
+
+  <% end %>
+</ul>
+
+<br>
+<h2>Add a category.</h2>
+<%= link_to "New Category", new_category_path %>
