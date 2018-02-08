@@ -1,6 +1,6 @@
-<%= render 'layouts/errors', :object => @sacco %>
+<%= render 'layouts/errors', :object => @category %>
 
-<%= form_for @sacco, :html => {:multipart => true} do |f| %>
+<%= form_for @category, :html => {:multipart => true} do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %>
 <%= f.file_field :logo %>
