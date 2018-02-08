@@ -1,0 +1,35 @@
+<%= render 'layouts/errors', :object => @product %>
+
+<div class="form  column">
+  <%= form_for [@category, @product] do |f| %>
+  <div class="col-md-6">
+
+    <div class="name">
+      <%= f.label :name %>
+      <br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="detail">
+      <%= f.label :detail %>
+      <br>
+      <%= f.text_field :detail %>
+    </div>
+
+    <div class="price">
+      <%= f.label :price %>
+      <br>
+      <%= f.text_field :price %>
+    </div>
+
+    <div class="image">
+      <%= f.file_field :image %>
+    </div>
+
+    <div class="button">
+      <%= f.submit %>
+    </div>
+
+  </div>
+  <% end %>
+</div>

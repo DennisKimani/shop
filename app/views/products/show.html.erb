@@ -1,0 +1,12 @@
+<p style="font-size: 40px; font: bold;">These are Details for <%= @product.name %>.</p>
+
+<div class="container">
+  <img style="width= 50px; height= 100px;"class="img-rounded" <%= image_tag @product.image_url.to_s %>
+</div>
+
+<hr>
+
+<ul>
+  <li> <strong>Details :-</strong> <%= @product.details %></li><br>
+  <li> <strong>price :-</strong> <%= @product.price %></li><br>
+</ul>
