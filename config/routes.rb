@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   root 'categories#index'
 
   match '/contact', to: 'categories#contact', via: :get
+  match '/home', to: 'categories#home', via: :get
 end
